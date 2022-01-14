@@ -1,15 +1,3 @@
-# Getting started
-# Classic Ping Pong Game using Python Turtle Library
-# Task Breakdown for the Game
-# Task 1- Build the game window and initialize the game's main loop
-# Task 2 : Create the two paddles and the ball
-# Task 3 : Move the paddles with the keyboard
-# Task 4 : Move the ball and constrain its movement
-# Task 5 : Bounce the ball back when it collides with the paddles
-# Task 6 : add a scoring system to the game
-
-# """************************************************************************"""
-
 import turtle
 
 wn = turtle.Screen()
@@ -50,7 +38,7 @@ ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.dx  = 0.2
-ball.dy = 0.2 #everytime the ball moves, it moves 2 pixels
+ball.dy = 0.2
 
 
 # Pen
