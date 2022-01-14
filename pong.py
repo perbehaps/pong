@@ -83,8 +83,11 @@ wn.onkeypress(paddle_b_up,"Up")
 wn.onkeypress(paddle_b_down,"Down")
 
 # main game loop
-while True:
-   wn.update()
+def tick():
+   wn.ontimer(tick, 10)
+
+   global score_a
+   global score_b
 
    #Move the ball
    ball.setx(ball.xcor() + ball.dx)
@@ -131,3 +134,8 @@ while True:
    if (ball.xcor() < -442 and ball.xcor() > -462) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
       ball.setx(-442)
       ball.dx *= -1
+   wn.update()
+
+if __name__ == "__main__":
+    tick()
+    wn.mainloop()
